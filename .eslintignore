@@ -1,0 +1,8 @@
+/lib
+/.history
+/node_modules
+/.next
+/build
+/out
+/utils/polyfills.js
+/next.config.js

@@ -1,0 +1,17 @@
+{
+    "rules": {
+        "max-empty-lines": 1,
+        "string-quotes": "single",
+        "function-url-quotes": "always",
+        "color-hex-length": null,
+        "indentation": 4,
+        "rule-empty-line-before": "always",
+        "block-closing-brace-newline-before": "always-multi-line",
+        "block-closing-brace-space-before": "always-single-line",
+        "block-no-empty": true,
+        "block-opening-brace-newline-after": "always-multi-line",
+        "block-opening-brace-space-after": "always-single-line",
+        "block-opening-brace-space-before": "always",
+        "block-closing-brace-empty-line-before": "never",
+    }
+}

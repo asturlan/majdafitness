@@ -1,0 +1,19 @@
+@import '../../../assets/scss/colors';
+
+.header {
+    color: white;
+    border-bottom: 1px solid;
+    height: 9rem;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        width: 10rem;
+        margin: 0 40px;
+    }
+}
+
+.style-line {
+    background: linear-gradient(90deg, $themePink, $themePurple);
+    height: 40px;
+}

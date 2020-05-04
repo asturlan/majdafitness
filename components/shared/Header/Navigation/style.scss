@@ -1,0 +1,23 @@
+@import '../../../../assets/scss/colors';
+
+.navigation {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+    span {
+        color: $themePink;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 10px;
+        line-height: 2;
+        text-align: center;
+        box-sizing: border-box;
+
+        &:hover {
+            color: $themePurple;
+        }
+    }
+}
