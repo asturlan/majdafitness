@@ -5,7 +5,7 @@
     src: url('/fonts/Montserrat-Medium.ttf');
     src: local('Montserrat'),
         url('/fonts/Montserrat-Medium.ttf') format('truetype');
-    
+    font-display: swap;
 }
 
 @font-face {
@@ -15,7 +15,17 @@
     src: url('/fonts/Montserrat-Light.ttf');
     src: local('Montserrat-light'),
         url('/fonts/Montserrat-Light.ttf') format('truetype');
-    
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NothingYouCouldDo-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/NothingYouCouldDo-Regular.ttf');
+    src: local('NothingYouCouldDo-Regular'),
+        url('/fonts/NothingYouCouldDo-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 // @font-face {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import Link from 'next/link';
 import getConfig from '../utils/getConfig';
 import MainLayout from '../layouts/main';
 import AwesomeCarousel from '../components/shared/AwesomeCarousel';
@@ -15,6 +14,9 @@ const Homepage = () => {
             <div className="content">
                 <div className="banner">
                     <AwesomeCarousel media={HomepageCarousel}/>
+                </div>
+                <div className="test">
+
                 </div>
             </div>
         </div>
