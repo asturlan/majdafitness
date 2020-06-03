@@ -11,28 +11,45 @@ body {
     font-size: 1.6rem;
 }
 
+body * {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     width: 100%;
 }
 
+p {
+    margin: 1rem auto;
+}
+
 .container {
-    max-width: 1200px;
+    padding: 4rem;
+    max-width: 120rem;
     margin: auto;
-    padding: 2rem;
 }
 
 .shadow-hard {
     box-shadow: 3px 5px 13px 0px grey;
 }
 
-.highlight-text-purple {
-    font-family: 'NothingYouCouldDo-Regular';
-    color: $themePurple;
+.highlight-text {
+    font-family: 'MarckScript-Regular';
+    font-weight: normal;
     margin: 0 0 2rem 0;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
-body * {
-    margin: 0;
-    padding: 0;
+.text-purple {
+    color: $themePurple;
+}
+
+.text-pink {
+    color: $themePink;
+}
+
+.style-div-pink {
+    background-color: $themePink;
+    width: 100%;
 }

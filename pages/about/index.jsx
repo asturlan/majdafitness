@@ -2,28 +2,28 @@ import React from 'react';
 import getConfig from '../../utils/getConfig';
 import MainLayout from '../../layouts/main';
 import MyJurney from '../../components/About/MyJurney';
+import HeadlineBlock from '../../components/shared/HeadlineBlock';
 import './style.scss';
 
-// IMAGES
-import introImg from '../../assets/images/About/introImg.png';
-
 const About = () => {
+
     return (
         <div className="about-me">
             <div className="content">
                 <div className="banner"></div>
                 <div className="container">
-                    <div className="introduction">
-                        <div className="intro-img">
-                            <img alt="My journey" src={introImg}></img>
-                        </div>
-                        <div className="intro-txt">
-                            <h1 className="highlight-text-purple">Moje putovanje</h1>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat fuga, nobis, eaque reiciendis accusantium, eos voluptates pariatur dignissimos saepe maxime praesentium nostrum perspiciatis suscipit odit ut aliquid deleniti blanditiis velit.
-                            </p>
-                        </div>
-                    </div>
+                    <HeadlineBlock
+                        config = {{
+                            alt: 'My jurney',
+                            imgSrc: 'About/introImg.jpg',
+                            textBg: '#e6a9cd'
+                        }}
+                    >
+                        <h1 className="highlight-text text-pink">Moje putovanje</h1>
+                        <p>
+                            Fitnessom sam se pocela baviti prije 10 godina. Prvih 5 godina rekreativno sam trenirala kako bih bila u formi. Vidjela sam kako mi se tijelo intenzivno mijenja te sam postala ovisna o tom sportu i svakodnevnom treniranju s ciljem da svoje tijelo dovedem do savršenstva.
+                        </p>
+                    </HeadlineBlock>
                     <MyJurney />
                 </div>
             </div>
