@@ -8,22 +8,45 @@
     .achievement {
         text-align: center;
         flex-basis: 25%;
+        padding: 2.5rem;
+        box-sizing: border-box;
 
         &-number {
             line-height: 10rem;
             font-size: 6rem;
             margin: 0.5rem;
-            color: white;
+            color: $themePink;
             padding: 3rem;
             display: inline-block;
             width: 10rem;
             height: 10rem;
-            background: linear-gradient(45deg, #c5058c, #5d2c71);
+            // background: linear-gradient(45deg, #c5058c, #5d2c71);
             border-radius: 10.5rem;
+            border-top: .6rem solid $themePurple;
+            border-left: .6rem solid $themePurple;
+
+            &-1 {
+                border-top: none;
+                border-bottom: .6rem solid $themePurple;
+            }
+
+            &-2 {
+                border-right: .6rem solid $themePurple;
+                border-left: none;
+            }
+
+            &-3 {
+                border-top: none;
+                border-left: none;
+                border-bottom: .6rem solid $themePurple;
+                border-right: .6rem solid $themePurple;
+            }
         }
 
         &-text {
             margin: 1rem 0;
+            color: $themePurple;
+            font-weight: bold;
         }
     }
 }

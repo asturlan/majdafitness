@@ -17,7 +17,7 @@ const Achievements = () => {
     const renderAchievements = () => (
         achievements.map((item, index) => (
             <div className="achievement" key={index} data-index={index}>
-                <p className="achievement-number shadow-hard">{item.number}</p>
+                <p className={`achievement-number achievement-number-${index}`}>{item.number}</p>
                 <p className="achievement-text">{item.text}</p>
             </div>
         ))

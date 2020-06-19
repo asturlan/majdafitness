@@ -1,6 +1,9 @@
 @import '../../../../assets/scss/colors';
+@use 'sass:list';
 
-.navigation {
+$navColors: #68155d, #72295e, #7a3f75, #8d5d8a, #a56c9d, #bc79ac;
+
+.navigationDT {
     display: flex;
     width: 100%;
     justify-content: left;
@@ -15,24 +18,145 @@
         height: 10rem;
         transition: all .2s linear;
 
-        a {
-            color: $themePurple;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 0 20px;
-            line-height: 2;
-            text-align: center;
-            box-sizing: border-box;
-            text-decoration: none;
-            line-height: 10rem;
-        
-            &:hover {
-                color: $themePink;
+        &:hover {
+            box-shadow: 0px 2px 5px 0px gray;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+
+        li {
+            height: 4rem;
+    
+            a {
+                line-height: 4rem;
+            }
+        }
+    }
+}
+
+.navigationSP {
+    overflow: hidden;
+
+    .hamburger-menu-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7rem;
+        height: 7rem;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+
+        .hamburger-menu {
+            background: $themePink;
+
+            &, &::before, &::after {
+                width: 4rem;
+                height: .4rem;
+                border-radius: .5rem;
+                box-shadow: 0 .2rem .5rem gray;
+                transition: all .5s ease-in-out;
+            }
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                background: $themePurple;
+            }
+
+            &::before {
+                transform: translateY(-1rem);
+            }
+
+            &::after {
+                transform: translateY(1rem);
             }
         }
 
+        &.open {
+
+            .hamburger-menu {
+                transform: translateX(5rem);
+                background: none;
+                box-shadow: none;
+                position: fixed;
+                z-index: 99999;
+
+                &::before {
+                    transform: rotate(45deg) translateX(-3.5rem) translateY(3.5rem);
+                }
+
+                &::after {
+                    transform: rotate(-45deg) translateX(-3.5rem) translateY(-3.5rem);
+                }
+            }
+        }
+    }
+
+    .hamburger-menu-nav {
+        display: none;
+
+        &.open {
+            display: block;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            overflow: auto;
+            z-index: 99998;
+            display: flex;
+            justify-content: flex-end;
+
+            ul {
+                padding-top: 7rem;
+                padding-left: .3rem;
+                margin-bottom: .3rem;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                width: 60%;
+                background-color: #00000026;
+
+                @for $i from 1 through 6 {
+                    & > :nth-child(#{$i}) {
+                        background-color: nth($navColors, $i);
+                    }
+                }
+
+                li {
+                    padding: 1rem 0;
+                    list-style: none;
+                    align-self: flex-end;
+                    margin-bottom: .3rem;
+                    width: 100%;
+
+                    a {
+                        line-height: 4rem;
+                        color: white;
+                        padding: 1.5rem 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navigationSP, .navigationDT {
+
+    li a {
+        color: $themePurple;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0 20px;
+        line-height: 2;
+        text-align: center;
+        box-sizing: border-box;
+        text-decoration: none;
+        line-height: 10rem;
+    
         &:hover {
-            box-shadow: 0px 2px 5px 0px gray;
+            color: $themePink;
         }
     }
 }

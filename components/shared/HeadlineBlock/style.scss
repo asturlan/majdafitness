@@ -1,7 +1,9 @@
 @import '../../../assets/scss/colors';
+@import '../../../assets/scss/mixins';
 
 .headline-block {
     margin-bottom: 14rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,9 +11,21 @@
     background-repeat: no-repeat;
     background-position: top right;
 
+    @include sm {
+        background-size: 39vw;
+        background-position: bottom -16px left;
+        margin-bottom: 7rem;
+    }
+
     .headline-img {
-        flex-basis: 60%;
+        flex-basis: 45%;
         position: relative;
+
+        @include sm {
+            margin-top: 7rem;
+            align-self: baseline;
+            flex-basis: 50%;
+        }
 
         img {
             z-index: 1;
@@ -26,35 +40,45 @@
             top: 20%;
             left: 75%;
             z-index: 0;
+
+            @include sm {
+                top: 40%;
+            }
         }
     }
 
     .headline-txt {
-        flex-basis: 50%;
+        flex-basis: 55%;
         padding: 4rem 1rem;
         position: relative;
         background-color: #e6a9cd;
         margin-top: 193px;
 
-        .highlight-text {
-            margin: 2rem 0;
+        @include sm {
+            margin-top: 0;
+            flex-basis: 50%;
         }
 
         p {
             font-weight: bold;
-            color: white;
+            color: $themePurple;
         }
     }
 
     &-right {
         background-image: url('../../../assets/images/Designs/design1r.png');
         background-position: top left;
+        
+        @include sm {
+            background-size: 39vw;
+            background-position: bottom -16px right;
+        }
 
         .headline-img {
             order: 2;
 
             .style-cube {
-                right: 75%;
+                right: 55%;
                 left: auto;
             }
         }

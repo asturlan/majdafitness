@@ -14,9 +14,33 @@
     --control-bullet-active-color: #e744b6;
     --loader-bar-color: #5d2c71;
     --loader-bar-height: 6px;
+
+    @media screen and (max-width: 1199px) {
+        --slider-height-percentage: 60%;
+    }
+    
+    @media screen and (max-width: 767px) {
+        --slider-height-percentage: 160%;
+        --organic-arrow-height: 22px;
+    }
+
+    @media screen and (max-width: 500px) {
+        --slider-height-percentage: 120%;
+    }
+}
+
+.awssld__container {
+    pointer-events: none;
 }
 
 .awssld__bullets {
     top: -32px;
     bottom: initial;
+}
+
+@media screen and (max-width: 520px) {
+
+    .awssld__controls {
+        visibility: visible;
+    }
 }

@@ -8,7 +8,7 @@ html {
 body {
     margin: 0;
     font-family: 'Montserrat-light', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 body * {
@@ -34,11 +34,21 @@ p {
     box-shadow: 3px 5px 13px 0px grey;
 }
 
+.style-line {
+    background: linear-gradient(90deg, $themePink, $themePurple);
+    height: 40px;
+
+    &-thin {
+        height: .05rem;
+        width: 100%;
+    }
+}
+
 .highlight-text {
     font-family: 'MarckScript-Regular';
     font-weight: normal;
     margin: 0 0 2rem 0;
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .text-purple {
@@ -49,7 +59,24 @@ p {
     color: $themePink;
 }
 
-.style-div-pink {
-    background-color: $themePink;
+.text-white {
+    color: white;
+}
+
+.style-div-violet {
+    background-color: $themeViolet;
     width: 100%;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    html {
+        font-size: 2vw;
+    }
+
+    .container {
+        padding: 2vw;
+    }
 }

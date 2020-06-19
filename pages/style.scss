@@ -1,15 +1,43 @@
+@import '../assets/scss/colors';
+@import '../assets/scss/mixins';
+
 .homepage {
 
     .content {
 
         .banner {
             box-shadow: 3px 5px 13px 0px grey;
-            margin-bottom: 5rem;
         }
 
-        .test {
-            height: 1000px;
-            width: 100%;
+        .my-tips {
+            margin-top: 3rem;
+            text-align: center;
+
+            .my-tips-headline {
+                .highlight-text {
+                    margin-top: 2rem;
+                    font-size: 3.5rem;
+                    width: 50%;
+                    margin: auto;
+    
+                    @include sm {
+                        width: 100%;
+                    }
+                }
+    
+                p {
+                    width: 39%;
+                    background: white;
+                    position: relative;
+                    z-index: 2;
+                }
+    
+                .style-line {
+                    height: .3rem;
+                    position: relative;
+                    top: -8.8rem;
+                }
+            }
         }
     }
 }

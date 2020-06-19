@@ -1,0 +1,86 @@
+@import '../../../assets/scss/colors';
+@import '../../../assets/scss/mixins';
+
+.my-tips-block {
+    display: flex;
+    flex-direction: column;
+
+    .my-tip {
+        width: 100%;
+        display: flex;
+        height: 40rem;
+
+        @include sm {
+            height: 55rem;
+        }
+        
+        &:nth-child(odd) {
+
+            .my-tip--img {
+                order: 2;
+            }
+
+            .my-tip--txt {
+                background-color: $themeViolet;
+                text-align: right;
+
+                h4 {
+                    color: $themePink;
+                }
+    
+                p {
+                    color: black;
+                }
+
+                .style-line-thin {
+                    background: linear-gradient(90deg, $themePurple, $themeViolet);
+                }
+
+                .tip-number {
+                    margin: 0 auto .5rem 0;
+                }
+            }
+        }
+
+        &--img {
+            width: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--txt {
+            width: 50%;
+            background-color: $themePink;
+            display: flex;
+            text-align: left;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 6rem;
+
+            h4 {
+                color: $themeViolet;
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: white;
+            }
+
+            @include sm {
+                padding: 1rem;
+            }
+        }
+
+        .style-line-thin {
+            padding: .05rem;
+            margin-bottom: 3.6rem;
+        }
+
+        .tip-number {
+            font-size: 1.3rem;
+            margin: 0 0 .5rem auto;
+        }
+    }
+}

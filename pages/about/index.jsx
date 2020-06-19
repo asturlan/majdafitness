@@ -16,7 +16,7 @@ const About = () => {
                         config = {{
                             alt: 'My jurney',
                             imgSrc: 'About/introImg.jpg',
-                            textBg: '#e6a9cd'
+                            textBg: 'rgb(230, 196, 216)'
                         }}
                     >
                         <h1 className="highlight-text text-pink">Moje putovanje</h1>
