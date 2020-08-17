@@ -1,4 +1,5 @@
 @import '../../../../assets/scss/colors';
+@import '../../../../assets/scss/mixins';
 @use 'sass:list';
 
 $navColors: #68155d, #72295e, #7a3f75, #8d5d8a, #a56c9d, #bc79ac;
@@ -17,10 +18,6 @@ $navColors: #68155d, #72295e, #7a3f75, #8d5d8a, #a56c9d, #bc79ac;
         align-items: center;
         height: 10rem;
         transition: all .2s linear;
-
-        &:hover {
-            box-shadow: 0px 2px 5px 0px gray;
-        }
     }
 
     @media screen and (max-width: 1199px) {
@@ -149,11 +146,14 @@ $navColors: #68155d, #72295e, #7a3f75, #8d5d8a, #a56c9d, #bc79ac;
         text-transform: uppercase;
         font-weight: bold;
         padding: 0 20px;
-        line-height: 2;
         text-align: center;
         box-sizing: border-box;
         text-decoration: none;
         line-height: 10rem;
+
+        @include md {
+            line-height: 2rem;
+        }
     
         &:hover {
             color: $themePink;

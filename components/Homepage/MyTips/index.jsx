@@ -14,7 +14,7 @@ const MyTips = () => {
                     >
                     </div>
                     <div className="my-tip--txt">
-                        <p className="tip-number">Savijet {index + 1}</p>
+                        <p className="tip-number"><i>Razlog {index + 1}</i></p>
                         <div className="style-line style-line-thin"></div>
                         <h4>{tip.headTxt}</h4>
                         <p>{tip.contentTxt}</p>

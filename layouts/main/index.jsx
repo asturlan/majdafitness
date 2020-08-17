@@ -4,7 +4,9 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 import Header from '../../components/shared/Header';
-// import Footer from '../shared/Footer';
+import Footer from '../../components/shared/Footer';
+import ScrollTop from '../../components/shared/ScrollTop';
+
 import './style.scss';
 
 const MainLayout = (Page, config) => {
@@ -33,8 +35,9 @@ const MainLayout = (Page, config) => {
                     <meta name="og:image" content="https://nextjs.org/static/twitter-cards/learn.png"></meta>
                 </Head>
                 <Header deviceDimensions={dimensions}/>
+                <ScrollTop />
                 <Page deviceDimensions={dimensions}/>
-                {/* <Footer grayFooter={config.grayFooter ? true : false} hasExitNotice={config.hasExitNotice} /> */}
+                <Footer />
             </>
         );
     };

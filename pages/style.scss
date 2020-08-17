@@ -10,10 +10,15 @@
         }
 
         .my-tips {
-            margin-top: 3rem;
+            margin-top: 0;
             text-align: center;
 
+            @include sm {
+                margin-top: 3rem;
+            }
+
             .my-tips-headline {
+
                 .highlight-text {
                     margin-top: 2rem;
                     font-size: 3.5rem;

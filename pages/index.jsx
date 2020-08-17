@@ -46,7 +46,7 @@ const Homepage = props => {
                             <h1 className="highlight-text text-pink">Tapkate na mjestu i nema nikakvih pomaka?</h1>
                             <p>
                                 Već godinama odlazite u tetetanu a ne vidite nikakve posebne rezultate? <br/><br/>
-                                <span className="text-pink">Negdje griješite!</span>
+                                Negdje griješite!
                             </p>
                             <div className="style-line"></div>
                         </div>

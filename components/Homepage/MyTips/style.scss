@@ -12,6 +12,13 @@
 
         @include sm {
             height: 55rem;
+
+            &:first-of-type {
+
+                .my-tip--img {
+                    background-position: 20%;
+                }
+            }
         }
         
         &:nth-child(odd) {

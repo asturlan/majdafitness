@@ -1,0 +1,27 @@
+.footer {
+
+    .style-line {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+
+        .social-logo {
+            height: 4rem;
+            width: 4rem;
+            margin: 0 1rem;
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 5rem;
+        }
+
+        .copyright-disclaimer {
+            color: white;
+            font-size: 1.2rem;
+            margin: 1rem 0 0 0;
+        }
+    }
+}
