@@ -15,7 +15,7 @@ const About = () => {
                     <HeadlineBlock
                         config = {{
                             alt: 'My jurney',
-                            imgSrc: 'About/introImg.jpg',
+                            imgSrc: '/About/introImg.jpg',
                             textBg: 'rgb(230, 196, 216)'
                         }}
                     >

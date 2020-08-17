@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const HeadlineBlock = (props) => {
-    const headlineImg = require(`../../../assets/images/${props.config.imgSrc}`);
+    const headlineImg = require(`../../../assets/images${props.config.imgSrc}`);
     return (
         <div className={`headline-block headline-block-${props.config.orientation !== undefined ? props.config.orientation : 'left'}`}>
             <div className="headline-img">
