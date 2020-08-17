@@ -27,7 +27,7 @@ const Homepage = props => {
                     <HeadlineBlock
                         config = {{
                             alt: 'My jurney',
-                            imgSrc: '/Homepage/introImg.jpg',
+                            imgSrc: 'introImgHome.jpg',
                             orientation: 'right',
                             textBg: '#f4e0ff'
                         }}
