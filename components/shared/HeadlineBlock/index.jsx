@@ -6,7 +6,7 @@ import './style.scss';
 class HeadlineBlock extends Component {
     constructor(props) {
         super(props);
-        this.introImg = require(`../../../assets/images${this.props.config.imgSrc}`);
+        this.introImg = require(`../../../assets/images${props.config.imgSrc}`);
     }
 
     render() {
