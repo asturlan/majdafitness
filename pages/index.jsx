@@ -12,8 +12,6 @@ import MyTips from '../components/Homepage/MyTips';
 
 import './style.scss';
 
-// IMAGES
-
 const Homepage = props => {
 
     return (

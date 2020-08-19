@@ -6,5 +6,9 @@ export default {
     About: {
         title: "Majdafitness | O meni",
         description: "Fitness trener Majda Vasić | O meni"
+    },
+    Transformations: {
+        title: "Majdafitness | Preobrazbe",
+        description: "Fitness trener Majda Vasić | Preobrazbe"
     }
 };

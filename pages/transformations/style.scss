@@ -1,0 +1,12 @@
+@import '../../assets/scss/mixins';
+
+.transformations {
+    min-height: 50rem;
+    column-count: 3;
+    column-gap: 3rem;
+    padding-top: 0;
+
+    @include sm {
+        column-count: 2;
+    }
+}

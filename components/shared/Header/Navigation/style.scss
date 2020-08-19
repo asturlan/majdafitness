@@ -2,8 +2,6 @@
 @import '../../../../assets/scss/mixins';
 @use 'sass:list';
 
-$navColors: #68155d, #72295e, #7a3f75, #8d5d8a, #a56c9d, #bc79ac;
-
 .navigationDT {
     display: flex;
     width: 100%;

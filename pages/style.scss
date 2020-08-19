@@ -16,33 +16,6 @@
             @include sm {
                 margin-top: 3rem;
             }
-
-            .my-tips-headline {
-
-                .highlight-text {
-                    margin-top: 2rem;
-                    font-size: 3.5rem;
-                    width: 50%;
-                    margin: auto;
-    
-                    @include sm {
-                        width: 100%;
-                    }
-                }
-    
-                p {
-                    width: 39%;
-                    background: white;
-                    position: relative;
-                    z-index: 2;
-                }
-    
-                .style-line {
-                    height: .3rem;
-                    position: relative;
-                    top: -8.8rem;
-                }
-            }
         }
     }
 }
