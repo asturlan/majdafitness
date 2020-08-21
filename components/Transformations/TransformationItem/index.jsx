@@ -14,7 +14,7 @@ const TransformationItem = props => {
         <div className='transformation-wrapper shadow-hard' style={{ borderColor: itemColor }}>
             <div>
                 <div className='transformation' style={{ opacity: !imgLoaded ? '0' : '1' }}>
-                    <div className='transformation-img'>
+                    <div className='transformation-img' style={{ backgroundColor: itemColor, borderColor: itemColor }}>
                         <img onLoad={() => {
                             setImgLoaded(true);
                         }} src={props.data[2]}></img>
