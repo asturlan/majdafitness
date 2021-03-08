@@ -13,7 +13,13 @@ const TransformationItem = props => {
     return (
         <div className='transformation-wrapper shadow-hard' style={{ borderColor: itemColor }}>
             <div>
-                <div className='transformation' style={{ opacity: !imgLoaded ? '0' : '1' }}>
+                <div
+                    className='transformation'
+                    style={{ opacity: !imgLoaded ? '0' : '1' }}
+                    onClick={() => {
+                        props.handleClick(props.data[4]);
+                    }}
+                >
                     <div className='transformation-img' style={{ backgroundColor: itemColor, borderColor: itemColor }}>
                         <img onLoad={() => {
                             setImgLoaded(true);
@@ -35,7 +41,8 @@ const TransformationItem = props => {
 };
 
 TransformationItem.propTypes = {
-    data: PropTypes.array
+    data: PropTypes.array,
+    handleClick: PropTypes.func
 };
 
 export default TransformationItem;

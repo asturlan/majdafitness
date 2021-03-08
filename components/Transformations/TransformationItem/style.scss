@@ -12,6 +12,7 @@
     background-color: white;
     break-inside: avoid;
     border-bottom: 1rem solid;
+    transform: translateZ(0);
 
     @include sm {
         flex-basis: 100%;

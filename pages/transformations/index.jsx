@@ -4,16 +4,19 @@ import getConfig from '../../utils/getConfig';
 import MainLayout from '../../layouts/main';
 
 import TransformationItem from '../../components/Transformations/TransformationItem';
+import GalleryModal from '../../components/shared/GalleryModal';
 
 import './style.scss';
 
 const Transformations = () => {
 
     const [transformations, setTransformations] = useState(null);
+    const [showImageModal, setShowImageModal] = useState(false);
+    const [gallerySrc, setGallerySrc] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1WLwpT_KEcSXg7QwJN3812V2sUg3zaE5m6kptNWKJsg4/values/A2:D?key=AIzaSyAdOk9elDGH9R6NIveb4KkumckfleRF5N8');
+            const result = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1WLwpT_KEcSXg7QwJN3812V2sUg3zaE5m6kptNWKJsg4/values/A2:E?key=AIzaSyAdOk9elDGH9R6NIveb4KkumckfleRF5N8');
             if (result.ok) {
                 const jsonResult = await result.json();
                 setTransformations(jsonResult.values);
@@ -24,9 +27,14 @@ const Transformations = () => {
         fetchData();
     }, []);
 
+    const setImageGallery = (gallerySrc) => {
+        setGallerySrc(gallerySrc.split(','));
+        setShowImageModal(true);
+    };
+
     const renderTransformations = () => (
         transformations.map((data, index) => (
-            <TransformationItem key={index} data={data} />
+            <TransformationItem handleClick={setImageGallery} key={index} data={data} />
         ))
     );
 
@@ -44,6 +52,7 @@ const Transformations = () => {
             <div className="transformations container">
                 {transformations && renderTransformations()}
             </div>
+            {showImageModal && <GalleryModal gallerySrc={gallerySrc}/>}
         </>
     );
 };

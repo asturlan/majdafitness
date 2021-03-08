@@ -1,0 +1,35 @@
+@import '../../../assets/scss/colors';
+
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    z-index: 2;
+    box-sizing: border-box;
+
+    &--overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $themeDarkPurple;
+        opacity: .8;
+        z-index: 2;
+    }
+
+    &--img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        z-index: 3;
+        cursor: pointer;
+    }
+}
